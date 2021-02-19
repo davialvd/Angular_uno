@@ -1,0 +1,34 @@
+<div>
+	
+
+
+	<form #formularioregistro="ngForm" (ngSubmit)="sendData(formularioregistro)">
+		
+		<span>Ingresar</span>
+		<br>
+		<label>Correo Electronico</label>
+		<span  +ngIf="formularioregistro.submitted && formularioregistro.controls['email'].errors"> Error</span>
+		<input type="text" name="email" id="email"  [(ngModel)]="user.email"  required>
+		<br>
+		<label>Contraseña</label>
+		<input type="text" name="nombre" id="nombre" [(ngModel)]="user.password">
+		<br>
+		
+		<a routerLink="/sig-up">Registrarme</a>
+		<br>
+		<button type="submit">Crear Cuenta</button>
+
+
+
+
+
+
+
+
+	</form>
+
+
+
+
+
+</div>
